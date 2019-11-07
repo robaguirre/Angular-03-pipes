@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { resolve } from 'q';
 
 @Component({
   selector: 'app-root',
@@ -19,4 +20,27 @@ export class AppComponent {
   porcion = 0.234;
 
   moneda = 1203.45;
+
+  heroe = {
+    nombre: 'Logan',
+    clave: 'Wolverine',
+    edad: 400,
+    direccion : {
+      calle: 'Primera',
+      casa: '19'
+    }
+  };
+
+  valorDePromesa = new Promise ( ( exito, error ) => {
+    setTimeout(() => exito('Llego el dato'), 3500);
+  });
+
+  // fecha = '2017-11-23'; Tb valdría
+  fecha = new Date();
+
+  fullNombre = 'robeRto agirre gARcia';
+
+  video = 'm0eSf0JrUIk';
+
+  activar = true;
 }
